@@ -1,0 +1,10 @@
+---
+argument_specs:
+  main:
+    options:
+      podman_docker_cli_emulation:
+        type: bool
+        default: false
+      podman_enable_system_socket:
+        type: bool
+        default: false

@@ -1,0 +1,14 @@
+---
+driver:
+  name: podman
+platforms:
+  - name: rockylinux10
+    image: docker.io/geerlingguy/docker-rockylinux10-ansible
+    pre_build_image: true
+    systemd: always
+    command: /sbin/init
+  - name: debian13
+    image: docker.io/geerlingguy/docker-debian13-ansible
+    pre_build_image: true
+    systemd: always
+    command: /sbin/init

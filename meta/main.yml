@@ -1,0 +1,15 @@
+---
+galaxy_info:
+  author: Egidio Docile
+  namespace: egdoc
+  role_name: podman
+  description: Install and setup Podman on Linux
+  license: GPLv3
+  min_ansible_version: '2.2'
+  galaxy_tags:
+    - podman
+    - containers
+    - linux
+    - docker
+
+dependencies: []

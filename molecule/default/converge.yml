@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Apply role under test
+      ansible.builtin.import_role:
+        name: egdoc.podman
+      vars:
+        podman_docker_cli_emulation: true
+        podman_enable_system_socket: true

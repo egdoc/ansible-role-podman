@@ -1,0 +1,3 @@
+---
+podman_docker_cli_emulation: false
+podman_enable_system_socket: false

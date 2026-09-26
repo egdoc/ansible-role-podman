@@ -1,0 +1,19 @@
+---
+- name: Ensure podman is installed
+  ansible.builtin.package:
+    name: podman
+    state: present
+
+- name: Ensure podman-docker is installed
+  ansible.builtin.package:
+    name: podman-docker
+    state: present
+  when: podman_docker_cli_emulation | bool
+
+- name: Ensure podman system socket is active and enabled
+  ansible.builtin.systemd_service:
+    name: podman.socket
+    state: started
+    enabled: true
+    scope: system
+  when: podman_enable_system_socket | bool
